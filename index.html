@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1 class="h2">Calculator</h1>
+    <div class="cal">
+        <div class="calculator">
+            <input type="text" class="screen" id="screen" readonly>
+            <div class="buttons">
+                <button style="background-color: rgb(234, 95, 49); color: white;" onclick="clearScreen()">C</button>
+
+                <button onclick="appendToScreen('/')">/</button>
+                <button onclick="appendToScreen('*')">*</button>
+                <button onclick="appendToScreen('%')">%</button>
+                <button onclick="appendToScreen('+')">+</button>
+                <button onclick="appendToScreen('9')">9</button>
+                <button onclick="appendToScreen('8')">8</button>
+                <button onclick="appendToScreen('7')">7</button>
+                <button onclick="appendToScreen('-')">-</button>
+                <button onclick="appendToScreen('6')">6</button>
+                <button onclick="appendToScreen('5')">5</button>
+                <button onclick="appendToScreen('4')">4</button>
+                <button onclick="appendToScreen('.')">.</button>
+                <button onclick="appendToScreen('3')">3</button>
+                <button onclick="appendToScreen('2')">2</button>
+                <button onclick="appendToScreen('1')">1</button>
+                <button onclick="appendToScreen('0')">0</button>
+                <button onclick="appendToScreen('00')">00</button>
+                <button onclick="appendToScreen('000')">000</button>
+
+
+                <button style="background-color: rgb(35, 125, 221);" onclick="calculate()">=</button>
+
+            </div>
+        </div>
+
+    </div>
+    <h2 class="h2">our team</h2>
+
+    <div class="container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="anshul.jpeg" alt="" height="182px" width="260px">
+            </div>
+            <div class="content">
+                <h2>VIVEK TIWARI</h2>
+                <P>hello....I'm vivek tiwari from b.tech cs 6th semester, i'm a full stack developer. And I have trained
+                    for 6 months from inocrypt infos and I have knowledge of html css javascript and bootstack. And I
+                    have knowledge of basic python. I have worked on 3-4 projects in front-end</P>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="HEMANT.jpg" alt="" height="182px" width="260px">
+            </div>
+            <div class="content">
+                <h2>HEMANT PATHAK</h2>
+                <p> hello....I'm HEMANT PATHAK from b.tech cs 6th semester, i'm a software Engineer. And I have
+                    trained for 1 months from IIT kanpur and I have knowledge of UI & UX.
+                    And I have knowledge of basic python.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function appendToScreen(value) {
+            document.getElementById("screen").value += value;
+        }
+
+        function clearScreen() {
+            document.getElementById("screen").value = "";
+        }
+
+        function calculate() {
+            let result = eval(document.getElementById("screen").value);
+            document.getElementById("screen").value = result;
+        }
+
+    </script>
+</body>
+
+</html>
